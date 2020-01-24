@@ -8,10 +8,10 @@
 * 女朋友需要从天眼查上爬取公司的注册地址，本项目用于帮助女朋友节约时间
 
 #### 输入文件（注意格式和Sheet名称必须相同才能解析）
-company_list.xlsx
+* company_list.xlsx
 
 #### 输出文件 
-company_info.xls
+* company_info.xls
 
 #### 用法说明
 ##### 环境配置
