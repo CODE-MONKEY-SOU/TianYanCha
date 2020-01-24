@@ -162,7 +162,7 @@ def get_comp_raddr(comp_url):
     """
     get register address of company
     :param comp_url: the url of target company
-    :return: a list of tags
+    :return: register address
     """
     print("comp_url: %s" % comp_url)
     html = get_html(comp_url)
@@ -186,7 +186,8 @@ def get_comp_raddr(comp_url):
 
 def write_data_to_xls(data, path):
     """
-    write the data to xls
+    write the data to xls,
+     Note: this method Refer from repo: https://github.com/wangyeyu2016/Python_Crawler_Tianyancha.git
     :param data: a list of tuple(example: [("name", "addr"), (...), ...]
     :param path: the target path
     :return: None
@@ -199,10 +200,10 @@ def write_data_to_xls(data, path):
     #    font.bold = True
     style.font = font
     print('正在存储数据，请勿打开excel')
-    name_list = ['公司名字','注册地址']
-    for i in range(0,len(name_list)):
+    name_list = ['公司名字', '注册地址']
+    for i in range(0, len(name_list)):
         sheet1.write(0, i, name_list[i], style)
-    for i in range(1,len(data)):
+    for i in range(1, len(data)):
         print(data[i-1][0])
         name = data[i][0]
         addr = data[i][1]
